@@ -18,9 +18,9 @@
         android:layout_marginTop="103dp"
         android:digits="0123456789."
         android:ems="10"
-        android:inputType="numberDecimal"
         android:hint="@string/amount"
-        app:layout_constraintBottom_toTopOf="@+id/btn_tip"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,14 +30,37 @@
     <Button
         android:id="@+id/btn_tip"
         android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_marginBottom="240dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="26dp"
         android:text="@string/tip"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.738"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_amount"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
+
+    <Spinner
+        android:id="@+id/spn_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:entries="@array/tip_array"
+        app:layout_constraintStart_toStartOf="@+id/txt_percent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_percent" />
+
+    <TextView
+        android:id="@+id/txt_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/percent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_tip"
+        app:layout_constraintStart_toStartOf="@+id/txt_amount"
+        app:layout_constraintTop_toBottomOf="@+id/txt_amount" />
 
 </android.support.constraint.ConstraintLayout>
