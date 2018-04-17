@@ -38,8 +38,8 @@ class MainActivity : AppCompatActivity() {
 
         percent?.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                tipString = parent.getItemAtPosition(position).toString() //this is your selected item
-                tipPercent = (tipString.substring(0, 2).toDouble() / 100)
+                tipString = parent.getItemAtPosition(position).toString() // this is your selected item
+                tipPercent = (tipString.substring(0, 2).toDouble() / 100) // remove % sign and convert to double
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                 if (amountString == "$") {
                     amount?.setText("")
                 } else if ((!amountString.contains("$")) && (amountString != "")) {
-                    amount?.setText("$$amountString")
+                    amount?.setText(getString(R.string.currency_format, amountString))
                     amount?.setSelection(amountString.length + 1)
                 }
             }

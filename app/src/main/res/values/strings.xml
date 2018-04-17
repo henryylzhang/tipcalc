@@ -9,4 +9,5 @@
         <item>18%</item>
         <item>20%</item>
     </string-array>
+    <string name="currency_format">$%s</string>
 </resources>
